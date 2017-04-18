@@ -1,0 +1,1233 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/valery-barysok/session-file-store"
+
+    >session-file-store (v1.0.0)</a>
+</h1>
+<h4>Session file store is a provision for storing session data in the session file</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.session-file-store">module session-file-store</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session-file-store">
+            function <span class="apidocSignatureSpan"></span>session-file-store
+            <span class="apidocSignatureSpan">(session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.toString">
+            function <span class="apidocSignatureSpan">session-file-store.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">session-file-store.</span>session_file_helpers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.session-file-store.session_file_helpers">module session-file-store.session_file_helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.asyncReap">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>asyncReap
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.clear">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>clear
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.decrypt">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>decrypt
+            <span class="apidocSignatureSpan">(options, data, sessionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.defaults">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>defaults
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.destroy">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>destroy
+            <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.destroyIfExpired">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>destroyIfExpired
+            <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.encrypt">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>encrypt
+            <span class="apidocSignatureSpan">(options, data, sessionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.escapeForRegExp">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>escapeForRegExp
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.expired">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>expired
+            <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.get">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>get
+            <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.getFilePatternFromFileExtension">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>getFilePatternFromFileExtension
+            <span class="apidocSignatureSpan">(fileExtension)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.getLastAccess">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>getLastAccess
+            <span class="apidocSignatureSpan">(session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.isExpired">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>isExpired
+            <span class="apidocSignatureSpan">(session, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.isSecret">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>isSecret
+            <span class="apidocSignatureSpan">(secret)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.length">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>length
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.list">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>list
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.reap">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>reap
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.scheduleReap">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>scheduleReap
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.sessionId">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>sessionId
+            <span class="apidocSignatureSpan">(options, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.sessionPath">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>sessionPath
+            <span class="apidocSignatureSpan">(options, sessionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.set">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>set
+            <span class="apidocSignatureSpan">(sessionId, session, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.session-file-store.session_file_helpers.setLastAccess">
+            function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>setLastAccess
+            <span class="apidocSignatureSpan">(session)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>encAlgorithm</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.session-file-store" id="apidoc.module.session-file-store">module session-file-store</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session-file-store" id="apidoc.element.session-file-store.session-file-store">
+        function <span class="apidocSignatureSpan"></span>session-file-store
+        <span class="apidocSignatureSpan">(session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">session-file-store = function (session) {
+  return require(&#x27;./lib/session-file-store&#x27;)(session);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.toString" id="apidoc.element.session-file-store.toString">
+        function <span class="apidocSignatureSpan">session-file-store.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.session-file-store.session_file_helpers" id="apidoc.module.session-file-store.session_file_helpers">module session-file-store.session_file_helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.asyncReap" id="apidoc.element.session-file-store.session_file_helpers.asyncReap">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>asyncReap
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">asyncReap = function (options, callback) {
+  callback || (callback = function () {
+  });
+
+  function execCallback(err) {
+    if (err &#x26;&#x26; options.reapSyncFallback) {
+      helpers.reap(options, callback);
+    } else {
+      err ? callback(err) : callback();
+    }
+  }
+
+  if (isWindows) {
+    childProcess.execFile(&#x27;node&#x27;, [path.join(__dirname, &#x27;reap-worker.js&#x27;), options.path, options.ttl], execCallback);
+  } else {
+    childProcess.execFile(path.join(__dirname, &#x27;reap-worker.js&#x27;), [options.path, options.ttl], execCallback);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+scheduleReap: function (options) {
+  if (options.reapInterval !== -1) {
+    options.reapIntervalObject = setInterval(function () {
+      if (options.reapAsync) {
+        options.logFn(&#x27;[session-file-store] Starting reap worker thread&#x27;);
+        helpers.<span class="apidocCodeKeywordSpan">asyncReap</span>(options);
+      } else {
+        options.logFn(&#x27;[session-file-store] Deleting expired sessions&#x27;);
+        helpers.reap(options);
+      }
+    }, options.reapInterval * 1000);
+  }
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.clear" id="apidoc.element.session-file-store.session_file_helpers.clear">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>clear
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (options, callback) {
+  fs.readdir(options.path, function (err, files) {
+    if (err) return callback([err]);
+    if (files.length &#x3c;= 0) return callback();
+
+    var errors = [];
+    files.forEach(function (file, i) {
+      if (options.filePattern.exec(file)) {
+        fs.remove(path.join(options.path, file), function (err) {
+          if (err) {
+            errors.push(err);
+          }
+          // TODO: wrong call condition (call after all completed attempts to remove instead of after completed attempt with last
+ index)
+          if (i &#x3e;= files.length - 1) {
+            errors.length &#x3e; 0 ? callback(errors) : callback();
+          }
+        });
+      } else {
+        // TODO: wrong call condition (call after all completed attempts to remove instead of after completed attempt with last
+index)
+        if (i &#x3e;= files.length - 1) {
+          errors.length &#x3e; 0 ? callback(errors) : callback();
+        }
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Attempts to clear out all of the existing session files
+ *
+ * @param  {Function} callback
+ *
+ * @api public
+ */
+FileStore.prototype.clear = function (callback) {
+  helpers.<span class="apidocCodeKeywordSpan">clear</span>(this.options, callback);
+};
+
+/**
+ * Attempts to find all of the session files
+ *
+ * @param  {Function} callback
+ *
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.decrypt" id="apidoc.element.session-file-store.session_file_helpers.decrypt">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>decrypt
+        <span class="apidocSignatureSpan">(options, data, sessionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decrypt = function (options, data, sessionId) {
+  var decipher = crypto.createDecipher(helpers.encAlgorithm, options.keyFunction(options.secret, sessionId));
+  var dec = decipher.update(data, options.encryptEncoding, options.encoding);
+  var decFinal = decipher.final(options.encoding);
+  if ( typeof decFinal === &#x27;string&#x27; ) {
+    dec += decFinal;
+  } else {
+    dec = Buffer.concat([dec, decFinal], dec.length + decFinal.length);
+  }
+  return dec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    operation.attempt(function () {
+
+      fs.readFile(sessionPath, helpers.isSecret(options.secret) &#x26;&#x26; !options.encryptEncoding ? null : options.encoding,
+function readCallback(err, data) {
+
+        if (!err) {
+          var json;
+          try {
+            json = options.decoder(helpers.isSecret(options.secret) ? helpers.<span class="apidocCodeKeywordSpan">decrypt</span>(
+options, data, sessionId) : data);
+          } catch (parseError) {
+            return fs.remove(sessionPath, function (removeError) {
+if (removeError) {
+  return callback(removeError);
+}
+
+callback(parseError);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.defaults" id="apidoc.element.session-file-store.session_file_helpers.defaults">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>defaults
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaults = function (options) {
+  options = options || {};
+
+  var NOOP_FN = function () {
+  };
+
+  var KEY_FN = function (secret, sessionId) {
+    return secret + sessionId;
+  };
+
+  return {
+    path: path.normalize(options.path || &#x27;./sessions&#x27;),
+    ttl: options.ttl || 3600,
+    retries: options.retries || 5,
+    factor: options.factor || 1,
+    minTimeout: options.minTimeout || 50,
+    maxTimeout: options.maxTimeout || 100,
+    reapInterval: options.reapInterval || 3600,
+    reapMaxConcurrent: options.reapMaxConcurrent || 10,
+    reapAsync: options.reapAsync || false,
+    reapSyncFallback: options.reapSyncFallback || false,
+    logFn: options.logFn || console.log || NOOP_FN,
+    fallbackSessionFn: options.fallbackSessionFn,
+    encoding: options.encoding !== undefined
+      ? options.encoding
+      : &#x27;utf8&#x27;,
+    encoder: options.encoder || JSON.stringify,
+    decoder: options.decoder || JSON.parse,
+    secret: options.secret,
+    encryptEncoding: options.encryptEncoding !== undefined
+      ? options.encryptEncoding
+      : &#x27;hex&#x27;,
+    fileExtension: options.fileExtension || &#x27;.json&#x27;,
+    filePattern: options.fileExtension
+      ? helpers.getFilePatternFromFileExtension(options.fileExtension)
+      : /\.json$/,
+    keyFunction: options.keyFunction || KEY_FN
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+#!/usr/bin/env node
+
+var helpers = require(&#x27;./session-file-helpers&#x27;);
+
+var options = helpers.<span class="apidocCodeKeywordSpan">defaults</span>({
+path: process.argv[2],
+ttl: process.argv[3]
+});
+
+if (options.path) {
+options.logFn(&#x27;[session-file-store:worker] Deleting expired sessions&#x27;);
+helpers.reap(options);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.destroy" id="apidoc.element.session-file-store.session_file_helpers.destroy">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>destroy
+        <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (sessionId, options, callback) {
+  var sessionPath = helpers.sessionPath(options, sessionId);
+  fs.remove(sessionPath, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    keyFunction: options.keyFunction || KEY_FN
+  };
+},
+
+destroyIfExpired: function (sessionId, options, callback) {
+  helpers.expired(sessionId, options, function (err, expired) {
+    if (err == null &#x26;&#x26; expired) {
+      helpers.<span class="apidocCodeKeywordSpan">destroy</span>(sessionId, options, callback);
+    } else if (callback) {
+      err ? callback(err) : callback();
+    }
+  });
+},
+
+scheduleReap: function (options) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.destroyIfExpired" id="apidoc.element.session-file-store.session_file_helpers.destroyIfExpired">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>destroyIfExpired
+        <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroyIfExpired = function (sessionId, options, callback) {
+  helpers.expired(sessionId, options, function (err, expired) {
+    if (err == null &#x26;&#x26; expired) {
+      helpers.destroy(sessionId, options, callback);
+    } else if (callback) {
+      err ? callback(err) : callback();
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.encrypt" id="apidoc.element.session-file-store.session_file_helpers.encrypt">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>encrypt
+        <span class="apidocSignatureSpan">(options, data, sessionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encrypt = function (options, data, sessionId) {
+  var cipher = crypto.createCipher(helpers.encAlgorithm, options.keyFunction(options.secret, sessionId));
+  var crypted = cipher.update(data, options.encoding, options.encryptEncoding );
+  var cryptedFinal = cipher.final(options.encryptEncoding);
+  if ( typeof cryptedFinal === &#x27;string&#x27; ) {
+    crypted += cryptedFinal;
+  } else {
+    crypted = Buffer.concat([crypted, cryptedFinal], crypted.length + cryptedFinal.length);
+  }
+  return crypted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  set: function (sessionId, session, options, callback) {
+try {
+  helpers.setLastAccess(session);
+
+  var sessionPath = helpers.sessionPath(options, sessionId);
+  var json = options.encoder(session);
+  if (helpers.isSecret(options.secret)) {
+    json = helpers.<span class="apidocCodeKeywordSpan">encrypt</span>(options, json, sessionId)
+  }
+  writeFileAtomic(sessionPath, json, function (err) {
+    if (callback) {
+      err ? callback(err) : callback(null, session);
+    }
+  });
+} catch (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.escapeForRegExp" id="apidoc.element.session-file-store.session_file_helpers.escapeForRegExp">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>escapeForRegExp
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeForRegExp = function (str) {
+  return str.replace(/[|\\{}()[\]^$+*?.]/g, &#x27;\\$&#x26;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+
+  escapeForRegExp: function (str) {
+return str.replace(/[|\\{}()[\]^$+*?.]/g, &#x27;\\$&#x26;&#x27;);
+  },
+
+  getFilePatternFromFileExtension: function (fileExtension) {
+return new RegExp( helpers.<span class="apidocCodeKeywordSpan">escapeForRegExp</span>(fileExtension) + &#x27;$&#x27; );
+  },
+
+  defaults: function (options) {
+options = options || {};
+
+var NOOP_FN = function () {
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.expired" id="apidoc.element.session-file-store.session_file_helpers.expired">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>expired
+        <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expired = function (sessionId, options, callback) {
+  helpers.get(sessionId, options, function (err, session) {
+    if (err) return callback(err);
+
+    err ? callback(err) : callback(null, helpers.isExpired(session, options));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      ? helpers.getFilePatternFromFileExtension(options.fileExtension)
+      : /\.json$/,
+    keyFunction: options.keyFunction || KEY_FN
+  };
+},
+
+destroyIfExpired: function (sessionId, options, callback) {
+  helpers.<span class="apidocCodeKeywordSpan">expired</span>(sessionId, options, function (err, expired) {
+    if (err == null &#x26;&#x26; expired) {
+      helpers.destroy(sessionId, options, callback);
+    } else if (callback) {
+      err ? callback(err) : callback();
+    }
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.get" id="apidoc.element.session-file-store.session_file_helpers.get">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>get
+        <span class="apidocSignatureSpan">(sessionId, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (sessionId, options, callback) {
+  var sessionPath = helpers.sessionPath(options, sessionId);
+
+  var operation = retry.operation({
+    retries: options.retries,
+    factor: options.factor,
+    minTimeout: options.minTimeout,
+    maxTimeout: options.maxTimeout
+  });
+
+  operation.attempt(function () {
+
+    fs.readFile(sessionPath, helpers.isSecret(options.secret) &#x26;&#x26; !options.encryptEncoding ? null : options.encoding, function readCallback
+(err, data) {
+
+      if (!err) {
+        var json;
+        try {
+          json = options.decoder(helpers.isSecret(options.secret) ? helpers.decrypt(options, data, sessionId) : data);
+        } catch (parseError) {
+          return fs.remove(sessionPath, function (removeError) {
+            if (removeError) {
+              return callback(removeError);
+            }
+
+            callback(parseError);
+          });
+        }
+        if (!err) {
+          return callback(null, helpers.isExpired(json, options) ? null : json);
+        }
+      }
+
+      if (operation.retry(err)) {
+        options.logFn(&#x27;[session-file-store] will retry, error on last attempt: &#x27; + err);
+      } else if (options.fallbackSessionFn) {
+        var session = options.fallbackSessionFn(sessionId);
+        helpers.setLastAccess(session);
+        callback(null, session);
+      } else {
+        callback(err);
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {String}   sessionId
+ * @param  {Object}   options
+ * @param  {Function} callback
+ *
+ * @api public
+ */
+expired: function (sessionId, options, callback) {
+  helpers.<span class="apidocCodeKeywordSpan">get</span>(sessionId, options, function (err, session) {
+    if (err) return callback(err);
+
+    err ? callback(err) : callback(null, helpers.isExpired(session, options));
+  });
+},
+
+isExpired: function (session, options) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.getFilePatternFromFileExtension" id="apidoc.element.session-file-store.session_file_helpers.getFilePatternFromFileExtension">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>getFilePatternFromFileExtension
+        <span class="apidocSignatureSpan">(fileExtension)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFilePatternFromFileExtension = function (fileExtension) {
+  return new RegExp( helpers.escapeForRegExp(fileExtension) + &#x27;$&#x27; );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    decoder: options.decoder || JSON.parse,
+    secret: options.secret,
+    encryptEncoding: options.encryptEncoding !== undefined
+      ? options.encryptEncoding
+      : &#x27;hex&#x27;,
+    fileExtension: options.fileExtension || &#x27;.json&#x27;,
+    filePattern: options.fileExtension
+      ? helpers.<span class="apidocCodeKeywordSpan">getFilePatternFromFileExtension</span>(options.fileExtension)
+      : /\.json$/,
+    keyFunction: options.keyFunction || KEY_FN
+  };
+},
+
+destroyIfExpired: function (sessionId, options, callback) {
+  helpers.expired(sessionId, options, function (err, expired) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.getLastAccess" id="apidoc.element.session-file-store.session_file_helpers.getLastAccess">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>getLastAccess
+        <span class="apidocSignatureSpan">(session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLastAccess = function (session) {
+  return session.__lastAccess;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+},
+
+isExpired: function (session, options) {
+  if (!session) return true;
+
+  var ttl = session.cookie &#x26;&#x26; session.cookie.originalMaxAge ? session.cookie.originalMaxAge : options.ttl * 1000;
+  return !ttl || helpers.<span class="apidocCodeKeywordSpan">getLastAccess</span>(session) + ttl &#x3c; new Date().getTime();
+},
+
+encrypt: function (options, data, sessionId) {
+  var cipher = crypto.createCipher(helpers.encAlgorithm, options.keyFunction(options.secret, sessionId));
+  var crypted = cipher.update(data, options.encoding, options.encryptEncoding );
+  var cryptedFinal = cipher.final(options.encryptEncoding);
+  if ( typeof cryptedFinal === &#x27;string&#x27; ) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.isExpired" id="apidoc.element.session-file-store.session_file_helpers.isExpired">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>isExpired
+        <span class="apidocSignatureSpan">(session, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isExpired = function (session, options) {
+  if (!session) return true;
+
+  var ttl = session.cookie &#x26;&#x26; session.cookie.originalMaxAge ? session.cookie.originalMaxAge : options.ttl * 1000;
+  return !ttl || helpers.getLastAccess(session) + ttl &#x3c; new Date().getTime();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return callback(removeError);
+      }
+
+      callback(parseError);
+    });
+  }
+  if (!err) {
+    return callback(null, helpers.<span class="apidocCodeKeywordSpan">isExpired</span>(json, options) ? null : json);
+  }
+}
+
+if (operation.retry(err)) {
+  options.logFn(&#x27;[session-file-store] will retry, error on last attempt: &#x27; + err);
+} else if (options.fallbackSessionFn) {
+  var session = options.fallbackSessionFn(sessionId);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.isSecret" id="apidoc.element.session-file-store.session_file_helpers.isSecret">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>isSecret
+        <span class="apidocSignatureSpan">(secret)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSecret = function (secret) {
+  return secret !== undefined &#x26;&#x26; secret != null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      factor: options.factor,
+      minTimeout: options.minTimeout,
+      maxTimeout: options.maxTimeout
+    });
+
+    operation.attempt(function () {
+
+      fs.readFile(sessionPath, helpers.<span class="apidocCodeKeywordSpan">isSecret</span>(options.secret) &#x26;&#x26; !options
+.encryptEncoding ? null : options.encoding, function readCallback(err, data) {
+
+if (!err) {
+  var json;
+  try {
+    json = options.decoder(helpers.isSecret(options.secret) ? helpers.decrypt(options, data, sessionId) : data);
+  } catch (parseError) {
+    return fs.remove(sessionPath, function (removeError) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.length" id="apidoc.element.session-file-store.session_file_helpers.length">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>length
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">length = function (options, callback) {
+  fs.readdir(options.path, function (err, files) {
+    if (err) return callback(err);
+
+    var result = 0;
+    files.forEach(function (file) {
+      if (options.filePattern.exec(file)) {
+        ++result;
+      }
+    });
+
+    callback(null, result);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Attempts to fetch number of the session files
+ *
+ * @param  {Function} callback
+ *
+ * @api public
+ */
+FileStore.prototype.length = function (callback) {
+  helpers.<span class="apidocCodeKeywordSpan">length</span>(this.options, callback);
+};
+
+/**
+ * Attempts to clear out all of the existing session files
+ *
+ * @param  {Function} callback
+ *
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.list" id="apidoc.element.session-file-store.session_file_helpers.list">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>list
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (options, callback) {
+  fs.readdir(options.path, function (err, files) {
+    if (err) return callback(err);
+
+    files = files.filter(function (file) {
+      return options.filePattern.exec(file);
+    });
+
+    callback(null, files);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+childProcess.execFile(path.join(__dirname, &#x27;reap-worker.js&#x27;), [options.path, options.ttl], execCallback);
+    }
+  },
+
+  reap: function (options, callback) {
+    callback || (callback = function () {
+    });
+    helpers.<span class="apidocCodeKeywordSpan">list</span>(options, function (err, files) {
+if (err) return callback(err);
+if (files.length === 0) return callback();
+
+var bagpipe = new Bagpipe(options.reapMaxConcurrent);
+
+var errors = [];
+files.forEach(function (file, i) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.reap" id="apidoc.element.session-file-store.session_file_helpers.reap">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>reap
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reap = function (options, callback) {
+  callback || (callback = function () {
+  });
+  helpers.list(options, function (err, files) {
+    if (err) return callback(err);
+    if (files.length === 0) return callback();
+
+    var bagpipe = new Bagpipe(options.reapMaxConcurrent);
+
+    var errors = [];
+    files.forEach(function (file, i) {
+      bagpipe.push(helpers.destroyIfExpired,
+          helpers.sessionId(options,file),
+          options,
+          function (err) {
+            if (err) {
+              errors.push(err);
+            }
+            if (i &#x3e;= files.length - 1) {
+              errors.length &#x3e; 0 ? callback(errors) : callback();
+            }
+          });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var options = helpers.defaults({
+  path: process.argv[2],
+  ttl: process.argv[3]
+});
+
+if (options.path) {
+  options.logFn(&#x27;[session-file-store:worker] Deleting expired sessions&#x27;);
+  helpers.<span class="apidocCodeKeywordSpan">reap</span>(options);
+} else {
+  options.logFn(&#x27;[session-file-store:worker] Reap worker started with invalid path&#x27;);
+  process.exit(1);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.scheduleReap" id="apidoc.element.session-file-store.session_file_helpers.scheduleReap">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>scheduleReap
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scheduleReap = function (options) {
+  if (options.reapInterval !== -1) {
+    options.reapIntervalObject = setInterval(function () {
+      if (options.reapAsync) {
+        options.logFn(&#x27;[session-file-store] Starting reap worker thread&#x27;);
+        helpers.asyncReap(options);
+      } else {
+        options.logFn(&#x27;[session-file-store] Deleting expired sessions&#x27;);
+        helpers.reap(options);
+      }
+    }, options.reapInterval * 1000);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var self = this;
+
+  options = options || {};
+  Store.call(self, options);
+
+  self.options = helpers.defaults(options);
+  fs.mkdirsSync(self.options.path);
+  helpers.<span class="apidocCodeKeywordSpan">scheduleReap</span>(self.options);
+  options.reapIntervalObject = self.options.reapIntervalObject;
+}
+
+/**
+ * Inherit from Store
+ */
+FileStore.prototype.__proto__ = Store.prototype;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.sessionId" id="apidoc.element.session-file-store.session_file_helpers.sessionId">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>sessionId
+        <span class="apidocSignatureSpan">(options, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sessionId = function (options, file) {
+  //return file.substring(0, file.lastIndexOf(&#x27;.json&#x27;));
+  if ( options.fileExtension.length === 0 ) return file;
+  var id = file.replace(options.filePattern, &#x27;&#x27;);
+  return id === file ? &#x27;&#x27; : id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (files.length === 0) return callback();
+
+var bagpipe = new Bagpipe(options.reapMaxConcurrent);
+
+var errors = [];
+files.forEach(function (file, i) {
+  bagpipe.push(helpers.destroyIfExpired,
+      helpers.<span class="apidocCodeKeywordSpan">sessionId</span>(options,file),
+      options,
+      function (err) {
+        if (err) {
+          errors.push(err);
+        }
+        if (i &#x3e;= files.length - 1) {
+          errors.length &#x3e; 0 ? callback(errors) : callback();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.sessionPath" id="apidoc.element.session-file-store.session_file_helpers.sessionPath">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>sessionPath
+        <span class="apidocSignatureSpan">(options, sessionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sessionPath = function (options, sessionId) {
+  //return path.join(basepath, sessionId + &#x27;.json&#x27;);
+  return path.join(options.path, sessionId + options.fileExtension);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   * @param  {String}   sessionId
+   * @param  {Object}   options
+   * @param  {Function} callback
+   *
+   * @api public
+   */
+  get: function (sessionId, options, callback) {
+var sessionPath = helpers.<span class="apidocCodeKeywordSpan">sessionPath</span>(options, sessionId);
+
+var operation = retry.operation({
+  retries: options.retries,
+  factor: options.factor,
+  minTimeout: options.minTimeout,
+  maxTimeout: options.maxTimeout
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.set" id="apidoc.element.session-file-store.session_file_helpers.set">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>set
+        <span class="apidocSignatureSpan">(sessionId, session, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (sessionId, session, options, callback) {
+  try {
+    helpers.setLastAccess(session);
+
+    var sessionPath = helpers.sessionPath(options, sessionId);
+    var json = options.encoder(session);
+    if (helpers.isSecret(options.secret)) {
+      json = helpers.encrypt(options, json, sessionId)
+    }
+    writeFileAtomic(sessionPath, json, function (err) {
+      if (callback) {
+        err ? callback(err) : callback(null, session);
+      }
+    });
+  } catch (err) {
+    if (callback) callback(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String}   sessionId
+ * @param {Object}   session
+ * @param {Function} callback (optional)
+ *
+ * @api public
+ */
+FileStore.prototype.set = function (sessionId, session, callback) {
+  helpers.<span class="apidocCodeKeywordSpan">set</span>(sessionId, session, this.options, callback);
+};
+
+/**
+ * Touch the given session object associated with the given `sessionId`
+ *
+ * @param {string} sessionId
+ * @param {object} session
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.session-file-store.session_file_helpers.setLastAccess" id="apidoc.element.session-file-store.session_file_helpers.setLastAccess">
+        function <span class="apidocSignatureSpan">session-file-store.session_file_helpers.</span>setLastAccess
+        <span class="apidocSignatureSpan">(session)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setLastAccess = function (session) {
+  session.__lastAccess = new Date().getTime();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+      }
+
+      if (operation.retry(err)) {
+        options.logFn(&#x27;[session-file-store] will retry, error on last attempt: &#x27; + err);
+      } else if (options.fallbackSessionFn) {
+        var session = options.fallbackSessionFn(sessionId);
+        helpers.<span class="apidocCodeKeywordSpan">setLastAccess</span>(session);
+        callback(null, session);
+      } else {
+        callback(err);
+      }
+    });
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
