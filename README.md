@@ -1,6 +1,6 @@
 # npmdoc-session-file-store
 
-#### api documentation for  [session-file-store (v1.0.0)](https://github.com/valery-barysok/session-file-store)  [![npm package](https://img.shields.io/npm/v/npmdoc-session-file-store.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-session-file-store) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-session-file-store.svg)](https://travis-ci.org/npmdoc/node-npmdoc-session-file-store)
+#### basic api documentation for  [session-file-store (v1.0.0)](https://github.com/valery-barysok/session-file-store)  [![npm package](https://img.shields.io/npm/v/npmdoc-session-file-store.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-session-file-store) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-session-file-store.svg)](https://travis-ci.org/npmdoc/node-npmdoc-session-file-store)
 
 #### Session file store is a provision for storing session data in the session file
 
@@ -119,7 +119,8 @@
         "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
         "test-tap": "mocha --reporter tap --check-leaks test/"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
